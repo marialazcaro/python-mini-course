@@ -3,6 +3,9 @@
 # True, False
 
 # if, elif, else
+if True: 
+    print("Yes, it is true")
+    
 
 # and
 
