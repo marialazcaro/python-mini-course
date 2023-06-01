@@ -15,10 +15,40 @@ def computerChoice():
 
 def rockScissorsPaper():
   #Code Here
+  user_choice = input ("choose rock, paper or scisors: ")
+  print(user_choice)
+  # if statement that checks if user's choice is correct 
+  if user_choice == "rock" or user_choice == "scisors" or user_choice == "paper":
+    print("Your response is valid")
+  else:
+    print("Your respone is not valid")
+        
+  #print tie if user and computer response is the same 
+  computer_choice = whatIsIt(computerChoice())
+  print("computer_choice: ")
+  print(computer_choice)
+
+  #print tie if user and computer resposne is the same 
+  if user_choice == computer_choice:
+    print("it's a tie")
+  else:
+    if user_choice == "rock":
+      if computer_choice == "scisors":
+        print("The users won!")
+        if computer_choice == "paper":
+          print("The computer won!")
+    elif user_choice == "scisors":
+      if user_choice == "paper":
+        print("The user won!")
+      if computer_choice == "rock":
+        print("The computer won!")
+    elif user_choice == "paper":
+      if computer_choice == "rock":
+        print("The user won!")
+        if computer_choice == "scisors":
+          print("The computer won!")
 
   #print random computer response
-  print(whatIsIt(computerChoice()))
+  # print(whatIsIt(computerChoice()))
 
 rockScissorsPaper()
-
-
